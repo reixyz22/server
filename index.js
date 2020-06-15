@@ -125,7 +125,9 @@ client.on('message', message => {
     }
 //!bug
       else if(message.content.startsWith(`${prefix}bug`)) 
-        message.channel.send("!q") 
+        message.channel.send("!q")
+        users = []
+        ping = [] 
 })
 
 client.login(token);
