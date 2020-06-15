@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { prefix } = require ('./config.json')
+const { prefix, token } = require ('./config.json')
 const client = new Discord.Client();
 var users= []
 var ping= []
@@ -128,4 +128,4 @@ client.on('message', message => {
         message.channel.send("!q") 
 })
 
-client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
+client.login(token);
