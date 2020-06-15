@@ -8,7 +8,7 @@ var countgame = 0
 var index = null
 var xrandomindex= []
 var msg= 0
-
+//b
 
 //copy/pasted shuffle array function, used to make one random index
 function shuffle(array) {
