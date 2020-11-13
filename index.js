@@ -84,43 +84,13 @@ client.on('message', message => {
               shuffleassign(ping)
               shuffleassign(users)
               countgame = 0 } 
+              var xrandomindex= []
           message.channel.send ((ping)[countgame] + " is currently asking " + (ping)[countgame + 1] )
           countgame = countgame +1
           msg = count - countgame 
         }
      else message.channel.send("Too few players to start the game.")
-//!s
-     else if(message.content.startsWith(`${prefix}s`))    
-     {  if (count > 1) {
-         if (message.author == (ping)[countgame]) {
-         message.channel.send((users)[countgame + 1] + " has been removed")
-         users.splice(countgame + 1, 1)
-         ping.splice(countgame+ 1, 1)
-         count = count -1 }
-         else {
-         message.channel.send((users)[countgame] + " has been removed.") 
-         users.splice(countgame,1)
-         ping.splice(countgame,1)
-         count = count -1 }
-         //entire !n command again (following !s)
-         if (count > 1) {
-            if (countgame == count -1 ) {
-                message.channel.send("The queue is being shuffled.")
-                shuffle(xrandomindex)
-                shuffleassign(ping)
-                shuffleassign(users)
-                countgame = 0 }
-                message.channel.send ((ping)[countgame] + " is currently asking " + (ping)[countgame + 1] )
-             
-             //testing code  
-             message.channel.send((ping) + (users))
-             message.channel.send((xrandomindex)  + (randomindex))
-                countgame = countgame +1
-                msg = count - countgame
-            }
-         else message.channel.send("Too few players to start the game.") }
-         else message.channel.send("Too few players to start the game.")  
-        }
+
 //!d
      else if(message.content.startsWith(`${prefix}d`))     
      {message.channel.send("**The current queue is:**")
