@@ -12,13 +12,13 @@ var msg= 0
 
 //copy/pasted shuffle array function, used to make one random index
 function shuffle(array) {
-    var currentIndex = ping.length -1, temporaryValue, randomIndex
+    var currentIndexz = ping.length -1, temporaryValue, randomIndex
   
     // it is what it is
     array[0]=0
-    while (0 !== currentIndex) {
-      array[currentIndex] = currentIndex;
-      currentIndex -= 1;
+    while (0 !== currentIndexz) {
+      array[currentIndexz] = currentIndexz;
+      currentIndexz -= 1;
     }
    //copy/pasted shuffle array function, used to make one random index-- copy/paste starts here
     // While there remain elements to shuffle...
@@ -38,7 +38,7 @@ function shuffle(array) {
       console.log(xrandomindex)
   }
 // added 5/28, should make the bot fully functional | takes the randomized index and applies it to any array, can be reusused on multiple arrays deterministically
-  function shuffleassign(array) {
+  function shuffle(array) {
     var currentIndex = array.length -1, temporaryValue, randomIndex;
   while (0 !== currentIndex) {
     randomIndex = xrandomindex[currentIndex];
@@ -111,6 +111,10 @@ client.on('message', message => {
                 shuffleassign(users)
                 countgame = 0 }
                 message.channel.send ((ping)[countgame] + " is currently asking " + (ping)[countgame + 1] )
+             
+             //testing code  
+             message.channel.send((ping) + (users))
+             message.channel.send((xrandomindex)  + (randomindex))
                 countgame = countgame +1
                 msg = count - countgame
             }
